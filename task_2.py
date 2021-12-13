@@ -49,7 +49,7 @@ class Version:
 
         # parse pre-release version
         pre_release_piece = re.sub(f'{main_version_piece}-?', '', version)
-        raw_pre_release = re.split(r'([a-z]+)(\d+)|\.', pre_release_piece)
+        raw_pre_release = re.split(r'([a-z]+)(\d+)|\.', pre_release_piece.lower())
 
         pre_release = []
         is_letter = False
