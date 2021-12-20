@@ -24,7 +24,7 @@ class Version:
         if isinstance(other, str):
             other = Version(other)
         elif not isinstance(other, Version):
-            raise TypeError()
+            return NotImplemented
 
         # comparison of main version
         for first, second in zip_longest(self.main_version, other.main_version, fillvalue=0):
